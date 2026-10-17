@@ -41,10 +41,11 @@ window.PORTFOLIO = {
   ],
 
   skills: [
-    { group: "Languages", icon: "code", items: ["Python", "SQL", "JavaScript", "Elixir"] },
-    { group: "AI & Machine Learning", icon: "spark", items: ["PyTorch", "scikit-learn", "Pandas", "LangChain", "OpenAI API", "RAG", "Model Evaluation"] },
-    { group: "Backend & Data", icon: "layers", items: ["FastAPI", "Phoenix LiveView", "SQLAlchemy", "PostgreSQL", "MySQL", "MongoDB", "OpenSearch", "ETL & Data Pipelines"] },
-    { group: "Cloud & Tools", icon: "tool", items: ["AWS", "AWS Lambda", "Docker", "Databricks", "Git", "Langfuse", "OpenTelemetry", "Claude Code", "Cursor"] }
+    { group: "Languages", icon: "code", items: ["Python", "Elixir", "SQL", "JavaScript"] },
+    { group: "Backend", icon: "layers", items: ["FastAPI", "Pydantic", "SQLAlchemy", "Alembic", "Phoenix", "Phoenix LiveView", "Ecto", "REST APIs"] },
+    { group: "AI & Machine Learning", icon: "spark", items: ["Recommendation Systems", "RAG", "LangChain", "OpenAI API", "PyTorch", "scikit-learn", "Pandas", "Model Evaluation"] },
+    { group: "Data & Cloud", icon: "cloud", items: ["PostgreSQL", "DynamoDB", "MySQL", "MongoDB", "OpenSearch", "AWS Lambda", "EventBridge", "Secrets Manager", "Databricks"] },
+    { group: "Testing & Tools", icon: "check", items: ["Pytest", "ExUnit", "LiveViewTest", "Git", "GitHub", "Docker Compose", "uv", "Langfuse", "OpenTelemetry", "Claude Code"] }
   ],
 
   // Featured projects. "highlights" are short bullet points; "repo" and "demo" are optional.
@@ -145,11 +146,13 @@ window.PORTFOLIO = {
       place: "SAGA Wisdom · Calgary, AB",
       period: "Jun 2026 – Present",
       points: [
-        "Designed and built a Python/FastAPI course recommendation microservice from scratch to production, including an offline precompute job on AWS Lambda",
-        "Shipped multiple recommendation strategies: Bayesian rating smoothing, co-occurrence, Jaccard similarity and cosine similarity of enrollment vectors",
-        "Built analytics on how users engage with the recommendation engine, with CSV export so the team could measure its performance",
-        "Designed and prototyped observability for the RAG course assistant with Langfuse/OpenTelemetry: latency and cost metrics, citation checks and LLM-based quality evaluation",
-        "Developed and improved UI features on the main learning platform in Elixir/Phoenix LiveView"
+        "Built a course recommendation microservice from scratch with FastAPI, SQLAlchemy, PostgreSQL and Alembic, with scheduled precompute jobs on AWS Lambda and EventBridge and fail-closed, secret-validated APIs",
+        "Designed explainable ranking strategies from enrollment signals, course co-occurrence, Bayesian rating smoothing, Jaccard and cosine similarity, job-role normalization and completion data",
+        "Integrated recommendations into the production Elixir/Phoenix LiveView platform, with contextual \"why recommended\" explanations and resilient service clients",
+        "Built impression-to-completion funnel analytics and a memory-bounded streaming CSV export with repeatable-read transactions, authorization, audit logging and spreadsheet-injection protection",
+        "Delivered end-to-end feedback for the RAG course assistant across Elixir and Python services: per-response ratings, retrieval and model metadata in DynamoDB, and privacy-aware conversation deletion",
+        "Prototyped observability for the RAG assistant with Langfuse/OpenTelemetry: latency and cost metrics, citation checks and LLM-based quality evaluation",
+        "Wrote unit, integration, LiveView and regression tests with Pytest and ExUnit, and iterated on features through code review"
       ]
     },
     {

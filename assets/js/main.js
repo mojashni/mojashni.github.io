@@ -15,7 +15,9 @@
     code: { d: '<path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/>' },
     spark: { d: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/>' },
     layers: { d: '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/>' },
-    tool: { d: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5 2.5-2.5Z"/>' },
+    cloud: { d: '<path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5a4.25 4.25 0 0 1-.5 8.5H7Z"/>' },
+    check: { d: '<circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.7 2.7L16.5 9.5"/>' },
+    tool: { d:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5 2.5-2.5Z"/>' },
     camera: { d: '<path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13.5" r="3.5"/>' },
     gamepad: { d: '<path d="M7 7h10a5 5 0 0 1 4.9 6l-.7 3.4a2.5 2.5 0 0 1-4.3 1.1L15 15.5H9l-1.9 2a2.5 2.5 0 0 1-4.3-1.1L2.1 13A5 5 0 0 1 7 7Z"/><path d="M7.5 10v3M6 11.5h3"/><circle cx="16" cy="10.5" r=".6" fill="currentColor"/><circle cx="17.5" cy="12.5" r=".6" fill="currentColor"/>' },
     glove: { d: '<path d="M7 20v-3.5L5.2 13A4 4 0 0 1 5 11.6V8a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v4.5a4.5 4.5 0 0 1-2 3.7V20Z"/><path d="M7 20h10M5 9.5h3.5A2.5 2.5 0 0 1 11 12v1"/>' },
@@ -74,7 +76,7 @@
       ? `<img class="avatar" src="${safeUrl(D.avatar)}" alt="${esc(D.name)}" width="160" height="160">`
       : `<div class="avatar-fallback">${esc(initials())}</div>`;
 
-    const stack = ["Python", "FastAPI", "PyTorch"].map((s) => `<span class="s">"${s}"</span>`).join('<span class="p">, </span>');
+    const stack = ["Python", "FastAPI", "Elixir"].map((s) => `<span class="s">"${s}"</span>`).join('<span class="p">, </span>');
     const code = [
       `<span class="k">const</span> <span class="v">me</span> <span class="p">= {</span>`,
       `  name<span class="p">:</span> <span class="s">"${esc(D.name)}"</span><span class="p">,</span>`,
