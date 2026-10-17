@@ -299,6 +299,7 @@ svg { flex-shrink: 0; }
 .project-links a { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 14px; color: var(--muted); transition: color .15s; }
 .project-links a:hover { color: var(--accent); }
 
+.more-link { margin-top: 24px; text-align: center; }
 .others { list-style: none; margin: 0; padding: 4px 24px; }
 .other { display: grid; grid-template-columns: 1fr auto auto; gap: 20px; align-items: center; padding: 16px 0; border-bottom: 1px dashed var(--border); }
 .other:last-child { border-bottom: 0; }

@@ -62,6 +62,18 @@ window.PORTFOLIO = {
       repo: "https://github.com/mojashni/minigenrec"
     },
     {
+      title: "Chinook Leadership Evaluator",
+      subtitle: "RAG · Full-stack · Oct 2025",
+      description:
+        "An educational chatbot that walks students through leadership case-study modules and grades their written answers with retrieval-augmented generation.",
+      highlights: [
+        "RAG grading service with LangChain, FAISS and OpenAI over 10 course modules",
+        "FastAPI + PostgreSQL backend with resumable student sessions, plus an admin panel for progress tracking and Excel export",
+        "Containerized with Docker and deployed as separate frontend, backend and RAG services on Railway"
+      ],
+      tags: ["Python", "FastAPI", "LangChain", "FAISS", "PostgreSQL", "Docker"]
+    },
+    {
       title: "AI-Generated Image Detection",
       subtitle: "Computer vision · Apr – May 2026",
       description:
@@ -108,15 +120,23 @@ window.PORTFOLIO = {
       ],
       tags: ["Python", "scikit-learn", "Pandas", "TF-IDF"],
       repo: "https://github.com/mojashni/Movie-Success-Prediction"
+    },
+    {
+      title: "Full-Stack Blog Platform",
+      subtitle: "Full-stack web app · 2024 – 2025",
+      description:
+        "A blogging platform with a React front end and an Express REST API backed by MongoDB.",
+      highlights: [
+        "JWT authentication with bcrypt-hashed passwords",
+        "Rich-text post editor, Redux Toolkit state management and a Tailwind/Flowbite UI"
+      ],
+      tags: ["React", "Redux", "Express", "MongoDB"],
+      repo: "https://github.com/mojashni/blog"
     }
   ],
 
-  // Smaller, earlier projects shown as a compact list.
-  otherProjects: [
-    { title: "Personal Blog", description: "Full-stack blog with React and Express.", tags: ["React", "Express"], repo: "https://github.com/mojashni/blog", demo: "https://mohammadsblog.onrender.com/" },
-    { title: "Interpreter in Go", description: "A basic interpreter written in Go.", tags: ["Go"], repo: "https://github.com/mojashni/interpreter-in-Go-" },
-    { title: "Simple Language Compiler", description: "Designed a small programming language and wrote its compiler.", tags: ["Python"], repo: "https://github.com/mojashni/simple-programming-language-compiler" }
-  ],
+  // Optional compact list of smaller projects (hidden when empty).
+  otherProjects: [],
 
   experience: [
     {
@@ -138,6 +158,16 @@ window.PORTFOLIO = {
       points: [
         "Spoke face-to-face with 40–60 potential customers a day, tailoring each conversation to their needs",
         "Refined pitch and messaging from customer feedback, turning frequent rejection into clearer, more persuasive conversations"
+      ]
+    },
+    {
+      title: "Frontend Developer Intern",
+      place: "EvoTeam",
+      period: "Apr 2024 – Sep 2024",
+      points: [
+        "Built responsive pages with HTML, CSS and Tailwind CSS, including a bookstore website",
+        "Developed a JavaScript weather app using the OpenWeather API to show current conditions and a forecast for Shiraz",
+        "Worked with backend teams on API integration, and tested and debugged pages to improve responsiveness and load times"
       ]
     }
   ],

@@ -179,7 +179,10 @@
           <h3>Earlier projects</h3>
           ${D.github ? `<a class="link-arrow" href="https://github.com/${encodeURIComponent(D.github)}?tab=repositories" ${ext}>All repositories ${icon("external", 15)}</a>` : ""}
         </div>
-        <ul class="card others">${others}</ul>` : ""}`;
+        <ul class="card others">${others}</ul>` : D.github ? `
+        <div class="more-link reveal">
+          <a class="link-arrow" href="https://github.com/${encodeURIComponent(D.github)}?tab=repositories" ${ext}>More on GitHub ${icon("external", 15)}</a>
+        </div>` : ""}`;
   }
 
   function renderSkills() {
