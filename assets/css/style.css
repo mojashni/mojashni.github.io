@@ -269,6 +269,10 @@ svg { flex-shrink: 0; }
 .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start; }
 .about-text p { color: var(--muted); font-size: 17px; }
 .about-text p + p { margin-top: 16px; }
+.interests { margin-top: 28px; }
+.interests h3 { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 12px; }
+.interests .chip { padding: 6px 14px; font-size: 14px; }
+.interests .chip svg { color: var(--accent); }
 .facts { display: grid; gap: 0; padding: 8px 24px; }
 .fact { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed var(--border); }
 .fact:last-child { border-bottom: 0; }

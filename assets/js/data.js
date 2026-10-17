@@ -26,6 +26,14 @@ window.PORTFOLIO = {
     "My work sits between machine learning and backend engineering: recommendation systems, RAG, data pipelines and model evaluation. I like building things that run in production and measuring whether they actually work."
   ],
 
+  // Shown under "About me". icon: camera | gamepad | glove | palette (or leave out)
+  interests: [
+    { label: "Photography", icon: "camera" },
+    { label: "Video games", icon: "gamepad" },
+    { label: "Boxing", icon: "glove" },
+    { label: "Oil painting", icon: "palette" }
+  ],
+
   facts: [
     { label: "Currently", value: "Software Developer Intern, SAGA Wisdom" },
     { label: "Studying", value: "MEng ECE, University of Calgary" },

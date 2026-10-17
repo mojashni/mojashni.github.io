@@ -16,7 +16,11 @@
     spark: { d: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/>' },
     layers: { d: '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/>' },
     tool: { d: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5 2.5-2.5Z"/>' },
-    cap: { d: '<path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/>' },
+    camera: { d: '<path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13.5" r="3.5"/>' },
+    gamepad: { d: '<path d="M7 7h10a5 5 0 0 1 4.9 6l-.7 3.4a2.5 2.5 0 0 1-4.3 1.1L15 15.5H9l-1.9 2a2.5 2.5 0 0 1-4.3-1.1L2.1 13A5 5 0 0 1 7 7Z"/><path d="M7.5 10v3M6 11.5h3"/><circle cx="16" cy="10.5" r=".6" fill="currentColor"/><circle cx="17.5" cy="12.5" r=".6" fill="currentColor"/>' },
+    glove: { d: '<path d="M7 20v-3.5L5.2 13A4 4 0 0 1 5 11.6V8a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v4.5a4.5 4.5 0 0 1-2 3.7V20Z"/><path d="M7 20h10M5 9.5h3.5A2.5 2.5 0 0 1 11 12v1"/>' },
+    palette: { d: '<path d="M12 3a9 9 0 0 0 0 18c1.1 0 1.8-.9 1.8-1.9 0-.5-.2-.9-.5-1.3-.3-.3-.5-.8-.5-1.3 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3Z"/><circle cx="7.5" cy="11" r="1" fill="currentColor"/><circle cx="10" cy="7" r="1" fill="currentColor"/><circle cx="15" cy="7.5" r="1" fill="currentColor"/>' },
+    cap: { d:'<path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/>' },
     download: { d: '<path d="M12 4v11M7 10l5 5 5-5M5 20h14"/>' },
     pin: { d: '<path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/>' },
     sun: { d: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>' },
@@ -113,10 +117,14 @@
   function renderAbout() {
     const paras = (D.about || []).map((p) => `<p>${esc(p)}</p>`).join("");
     const facts = (D.facts || []).map((f) => `<div class="fact"><dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join("");
+    const interests = (D.interests || []).map((i) => `<span class="chip">${i.icon ? icon(i.icon, 15) : ""}${esc(i.label)}</span>`).join("");
     $("#about").innerHTML = `
       ${sectionHead(1, "about", "About me")}
       <div class="about-grid">
-        <div class="about-text reveal">${paras}</div>
+        <div class="about-text reveal">
+          ${paras}
+          ${interests ? `<div class="interests"><h3>Outside of code</h3><div class="chips">${interests}</div></div>` : ""}
+        </div>
         ${facts ? `<dl class="card facts reveal">${facts}</dl>` : ""}
       </div>`;
   }
