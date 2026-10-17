@@ -71,7 +71,8 @@ window.PORTFOLIO = {
         "FastAPI + PostgreSQL backend with resumable student sessions, plus an admin panel for progress tracking and Excel export",
         "Containerized with Docker and deployed as separate frontend, backend and RAG services on Railway"
       ],
-      tags: ["Python", "FastAPI", "LangChain", "FAISS", "PostgreSQL", "Docker"]
+      tags: ["Python", "FastAPI", "LangChain", "FAISS", "PostgreSQL", "Docker"],
+      repo: "https://github.com/mojashni/Chinook-Leadership-Evaluator"
     },
     {
       title: "AI-Generated Image Detection",
